@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install virtualenv
 RUN virtualenv venv
-RUN source venv/bin/activate
+RUN venv/bin/activate
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
