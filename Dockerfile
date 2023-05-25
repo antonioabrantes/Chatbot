@@ -6,7 +6,6 @@ WORKDIR /app
 
 # Copy requirements and install dependencies
 COPY requirements.txt requirements.txt
-RUN pip install virtualenv
 RUN virtualenv venv
 RUN chmod +x venv/bin/activate
 RUN venv/bin/activate
