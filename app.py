@@ -15,6 +15,6 @@ def contatos():
 def usuarios(nome_usuario):
 	return render_template("usuarios.html",nome_usuario=nome_usuario)
 
-if __name__ == "__app__":
+if __name__ == "__main__":
 	#app.run(debug=True)
 	app.run(host='0.0.0.0', port=8080)
