@@ -11,6 +11,7 @@ RUN virtualenv venv
 RUN chmod +x venv/bin/activate
 RUN venv/bin/activate
 RUN pip install --upgrade pip
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Copy other project files
