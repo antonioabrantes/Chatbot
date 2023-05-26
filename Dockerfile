@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Work directory
-WORKDIR /app
+WORKDIR /chatbot
 
 # Copy requirements and install dependencies
 COPY requirements.txt requirements.txt
@@ -10,7 +10,6 @@ RUN pip install virtualenv
 RUN virtualenv venv
 RUN chmod +x venv/bin/activate
 RUN venv/bin/activate
-RUN pip install --upgrade pip
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
@@ -21,4 +20,4 @@ COPY . .
 EXPOSE 8080
 
 # Command to run on server
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8080", "chatbot:app"]
