@@ -6,6 +6,7 @@ WORKDIR /chatbot
 
 # Copy requirements and install dependencies
 COPY requirements.txt requirements.txt
+RUN dir
 RUN pip install virtualenv
 RUN virtualenv venv
 RUN chmod +x venv/bin/activate
