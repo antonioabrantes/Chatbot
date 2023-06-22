@@ -13,6 +13,7 @@ RUN chmod +x venv/bin/activate
 RUN venv/bin/activate
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+RUN pip install rasa[mitie,nlu]
 RUN mkdir -p tesauro
 RUN cd tesauro
 RUN rasa run --enable-api -m ./models/20230618-100059-terminal-content.tar.gz --cors "*"
