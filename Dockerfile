@@ -13,11 +13,9 @@ RUN chmod +x venv/bin/activate
 RUN venv/bin/activate
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-RUN pip install rasa
 RUN docker ps
 RUN mkdir -p tesauro
 RUN cd tesauro
-RUN rasa run --enable-api -m ./models/20230618-100059-terminal-content.tar.gz --cors "*"
 
 # Copy other project files
 COPY . .
